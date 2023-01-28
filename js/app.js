@@ -1,3 +1,6 @@
+// Multiplication Mastermind
+// defeat your numerical nemesis
+
 //Needed
 //Game title
 //Intructions- preferably not alert prompt, but can be
