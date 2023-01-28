@@ -1,3 +1,13 @@
 body {
-    background-color: aqua;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.set {
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+    background: rgb(19, 234, 230)
 }
