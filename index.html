@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplication Mayhem</title>
-    <link href='https://fonts.googleapis.com/css2?family=Bangers&display=swap' rel='stylesheet'>
     <link href="./css/style.css" type="text/css" rel="stylesheet">
     <script src="./js/app.js"></script>
 </head>
-<body>
+    <body>
     <h1>Multiplication Mayhem</h1>
     <div class="image-container">
         <img src="./assets/Background.jpg" alt="image"> 
     </div>
     <button id="instructions-button" onclick="showInstructions()">Instructions</button>
     <button id="start-button">Start</button>
-    
     <div id="instructions" style="display:none;">
         <h2>Instructions</h2>
         <ul>
@@ -28,5 +25,24 @@
         </ul>
     </div>
     
-</body>
-</html>
+    <div>
+        <p id="hero-name"></p>
+        <progress id="hero-progress" max={hero.health} value={hero.health}></progress>
+    </div>
+    <div>
+        <p id="villain-name"></p>
+        <progress id="villain-progress" max={villain.health} value={villain.health}></progress>
+    </div>
+    </body>
+    </html>
+
+
+    
+
+
+
+
+
+
+
+   

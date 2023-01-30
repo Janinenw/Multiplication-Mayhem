@@ -40,32 +40,28 @@ class Hero {
     constructor(name) {
         this.name = name;
         this.health = 100;
-       
     }
 }
-
-const hero = new Hero ("Multiplication Mastermind")
-console.log(hero)
-
-
+const hero = new Hero ("Multiplication Mastermind");
 class Villain {
     constructor(name) {
         this.name = name;
         this.health = 100;
-       
     }
 }
-
-const villain = new Villain ("The Calculator")
-console.log(villain)
-
-
+const villain = new Villain ("The Calculator");
 function showInstructions(){
-    const instructions = document.getElementById("instructions");
-    if(instructions.style.display === "none"){
-        instructions.style.display = "block";
-    }else{
-        instructions.style.display = "none";
-    }
+const instructions = document.getElementById("instructions");
+if(instructions.style.display === "none"){
+instructions.style.display = "block";
+}else{
+instructions.style.display = "none";
+}
 }
 
+const heroHealth = document.getElementById("hero-progress");
+heroHealth.value = hero.health;
+const villainHealth = document.getElementById("villain-progress");
+villainHealth.value = villain.health;
+document.getElementById("hero-name").innerHTML = hero.name;
+document.getElementById("villain-name").innerHTML = villain.name;
