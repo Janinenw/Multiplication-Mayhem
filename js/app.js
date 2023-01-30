@@ -36,6 +36,29 @@
 // console.log(num1)
 // console.log(num2)
 // console.log((num1) * (num2))
+class Hero {
+    constructor(name) {
+        this.name = name;
+        this.health = 100;
+       
+    }
+}
+
+const hero = new Hero ("Multiplication Mastermind")
+console.log(hero)
+
+
+class Villain {
+    constructor(name) {
+        this.name = name;
+        this.health = 100;
+       
+    }
+}
+
+const villain = new Villain ("The Calculator")
+console.log(villain)
+
 
 function showInstructions(){
     const instructions = document.getElementById("instructions");
@@ -45,3 +68,4 @@ function showInstructions(){
         instructions.style.display = "none";
     }
 }
+
