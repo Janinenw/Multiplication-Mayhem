@@ -1,4 +1,4 @@
-body {
+/* body {
     background: black;
     justify-content: center;
     align-items: center;
@@ -25,5 +25,41 @@ body {
     
     h1 {
     font-family: 'Bangers', cursive;
-    color: rgb(233, 235, 175)
+    color: rgb(233, 235, 175);
+    text-align:center;
+    } */
+
+    /* body {
+    background: black;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .image-container {
+        width: 75%;
+        height: 75vh;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+        margin-top: 50px;
+        border: solid 2px rgb(233, 235, 175);
+        }
+        
+        .image-container img {
+            position: relative;
+            top: -10px;
+            left: 50%;
+            transform: translate(-50%, 0) scale(1.5);
+            max-width: 100%;
+            max-height: 100%;
+            }
+    
+    h1 {
+    font-family: 'Bangers', cursive;
+    color: rgb(233, 235, 175);
+    text-align:center;
+    } */
+
+    body {
+        background-color: aliceblue;
     }
