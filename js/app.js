@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
           this.health = 100;
       }
     }
-  
+    
     class Villain {
       constructor(name) {
           this.name = name;
@@ -184,36 +184,36 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   
-    const hero = new Hero("Multiplication Mastermind");
-    const villain = new Villain("The Calculator");
+    const hero = new Hero("Multiplication Mastermind");// instantiation of hero
+    const villain = new Villain("The Calculator");// instantiation of villain
   
-    document.getElementById("start-button").addEventListener("click", function() {
-      document.querySelector(".buttons-one").style.display = "none";
+    document.getElementById("start-button").addEventListener("click", function() {// executes anon function when start is clicked, calls start game function,removes hidden
+    //   document.querySelector(".buttons-one").style.display = "none";
       document.getElementById("hero-bar").classList.remove("hidden");
       document.getElementById("villain-bar").classList.remove("hidden");
       startGame();
     });
   
     document.getElementById("instructions-button").addEventListener("click", function() {
-      document.getElementById("instructions").style.display = "block";
+      document.getElementById("instructions").style.display = "block"; 
     });
   
-    const startGame = function() {
-      let question = Math.floor(Math.random() * 10) + 1;
-      question = `${question} * ${question}`;
+    const startGame = function() { 
+      let question = Math.floor(Math.random() * 12) + 1; 
+      question = `${question} x ${question}`;
       document.getElementById("question").innerHTML = question;
   
       document.getElementById("submit-button").addEventListener("click", function() {
-        let answer = document.getElementById("answer").value;
-        if (answer == question.split(" ")[0] * question.split(" ")[2]) {
-          document.getElementById("result").innerHTML = "Correct!";
-          hero.health += 10;
-          villain.health -= 10;
-          updateHealthBars();
+       let answer = document.getElementById("answer").value;
+       if (answer == question.split(" ")[0] * question.split(" ")[2]) {// is there more efficient way than accessing first and third of array of substrings? change this?
+       document.getElementById("result").innerHTML = "Correct!";
+         hero.health += 10;
+        villain.health -= 10;
+        updateHealthBars();
         } else {
-          document.getElementById("result").innerHTML = "Incorrect.";
-          hero.health -= hero.health * 0.1;
-          villain.health += villain.health * 0.1;
+         document.getElementById("result").innerHTML = "Incorrect.";
+        hero.health -= hero.health * 0.1;
+        villain.health += villain.health * 0.1;
           updateHealthBars();
         }
       });
@@ -223,4 +223,4 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("hero-level").style.width = `${hero.health}%`;
       document.getElementById("villain-level").style.width = `${villain.health}%`;
     };
-  });
+});

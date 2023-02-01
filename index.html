@@ -5,31 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplication Mayhem</title>
-    <link href="./css/style.css" type="text/css" rel="stylesheet">
-    <script src="./js/app.js"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <h1>Multiplication Mayhem</h1>
+    <button class="buttons-one" id="start-button">Start</button>
+    <button class="buttons-one" id="instructions-button">Instructions</button>
     <div class="image-container">
-        <img src="./assets/Background.jpg" alt="image"> 
+        <img src="assets/take-2-background.jpg" alt="image"> 
     </div>
     <form>
-        <p>What is the result of:</p>
+        
         <p id="question"></p>
         <input type="text" id="answer">
         <button id="submit-button">Submit</button>
         <p id="result"></p>
     </form>
-    <button class="buttons-one" id="start-button">Start</button>
-    <button class="buttons-one" id="instructions-button">Instructions</button>
-    <div id="instructions" style="display:none;">
-        <h2>Instructions</h2>
-        <ul>
-            <li>Blah</li>
-            <li>Blah Blah</li>
-            <li>Blah Blah Blah</li>
-            <li>Blah Blah Blah Blah</li>
-        </ul>
+   
+    <div id="instructions">
+        <p>Blah<br>Blah Blah<br>Blah Blah Blah<br></p>
     </div>
     <div id="hero-bar" class="hidden">
         <div id="hero-level"></div>
@@ -37,6 +31,7 @@
     <div id="villain-bar" class="hidden">
         <div id="villain-level"></div>
     </div>
-    
+    <script src="./js/app.js"></script>
 </body>
 </html>
+
