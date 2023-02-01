@@ -62,8 +62,9 @@ setup();
 });
 
 const playGame = () => {
-  const question = Math.floor(Math.random() * 12) + 1;
-  document.getElementById("question").innerHTML = `${question} x ${question}`;
+  const num1 = Math.floor(Math.random() * 12) + 1;
+  const num2 =Math.floor(Math.random() * 12) + 1;
+  document.getElementById("question").innerHTML = `${num1} x ${num2}`;
 }
 
 const checkAnswer = (e) => {
@@ -76,5 +77,6 @@ const checkAnswer = (e) => {
   } else {
   document.getElementById("result").innerHTML = "Try again.";
   }
+  document.getElementById("answer").value = "";
   playGame();
   }
