@@ -105,20 +105,21 @@
     document.getElementById("answer").value = "";
   }
 
+
   let countdown; 
 
   const startTimer = (response) => {
-    let timer = 15;
-    countdown = setInterval(() => { 
-      timer--;
-      document.getElementById("timer").innerHTML = timer;
-      if (timer <= 0) {
-        clearInterval(countdown);
-        decreaseHeroBar();
-        document.getElementById("result").innerHTML = `The correct answer was ${response}.`;
-        playGame();
-      }
+    let timer = 16;
+    countdown = setInterval(() => {
+    timer--;
+    document.getElementById("timer").innerHTML = timer;
+    if (timer <= 0) {
+    clearInterval(countdown);
+    decreaseHeroBar();
+    document.getElementById("result").innerHTML = `The correct answer was ${response}.`;
+    setTimeout(() => {
+    playGame();
+    }, 2000);
+    }
     }, 1000);
-  };
-
-
+    };
