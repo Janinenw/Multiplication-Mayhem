@@ -327,6 +327,7 @@
   
         const villainBar = document.getElementById("villain-bar");
         villainBar.classList.remove("hidden");
+        document.getElementById("villain-level").style.width = "100%";
   
         startButton.style.display = "none";
         setTimeout(instructionsCheck, 5000);
@@ -360,12 +361,12 @@
     if (answer == response) {
       document.getElementById("result").innerHTML = "Correct!";
       decreaseVillainBar();
+      playGame();
     } else {
       document.getElementById("result").innerHTML = "Try again.";
+    decreaseHeroBar();
     }
-    decreaseHeroBar()
     document.getElementById("answer").value = "";
-    playGame();
   }
 
 
@@ -378,9 +379,9 @@
     document.getElementById("hero-level").style.width = `${hero.health}%`;
   }
 const decreaseVillainBar = () => {
-    villain.health -= decreaseAmount;
+    villain.health -= 10;
     if (villain.health < 0) {
       villain.health = 0;
     }
-    document.getElementById("villain-bar").style.width = `${villain.health}%`;
+    document.getElementById("villain-level").style.width = `${villain.health}%`;
 };
