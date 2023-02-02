@@ -60,7 +60,7 @@ h1 {
     color: white
 }
 
-#hero-bar {
+/* #hero-bar {
     width: 200px;
     height: 20px;
     top: -480px;
@@ -81,9 +81,19 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;  */
     
-}
+    #hero-bar {
+        width: 200px;
+        height: 20px;
+        border: 1px solid black;
+      }
+    
+      #hero-level {
+        width: 100%; /* start at full hunger */
+        height: 100%;
+        background-color: green;
+      }
 
 #villain-bar {
     top: -510px;
