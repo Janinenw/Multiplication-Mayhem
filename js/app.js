@@ -65,13 +65,29 @@
   });
   
   const playGame = () => {
-    const num1 = Math.floor(Math.random() * 12) + 1;
-    const num2 = Math.floor(Math.random() * 12) + 1;
-    document.getElementById("question").innerHTML = `${num1} x ${num2}`
-    startTimer(num1 * num2);
+  const num1 = Math.floor(Math.random() * 12) + 1;
+  const num2 = Math.floor(Math.random() * 12) + 1;
+  document.getElementById("question").innerHTML = `${num1} x ${num2}`
+  startTimer(num1 * num2);
+};
+
+
+  const decreaseHeroBar = () => {
+    hero.health -= 10;
+    if (hero.health < 0) {
+      hero.health = 0;
+    }
+    document.getElementById("hero-level").style.width = `${hero.health}%`;
+  }
+
+  const decreaseVillainBar = () => {
+    villain.health -= 10;
+    if (villain.health < 0) {
+      villain.health = 0;
+    }
+    document.getElementById("villain-level").style.width = `${villain.health}%`;
   };
-  
-  
+
   const checkAnswer = (e) => {
     e.preventDefault();
     const answer = document.getElementById("answer").value;
@@ -80,11 +96,29 @@
     if (answer == response) {
       document.getElementById("result").innerHTML = "Correct!";
       decreaseVillainBar();
+      clearInterval(countdown)
       playGame();
     } else {
       document.getElementById("result").innerHTML = "Try again.";
       decreaseHeroBar();
     }
-    
-  
+    document.getElementById("answer").value = "";
   }
+
+  let countdown; 
+
+  const startTimer = (response) => {
+    let timer = 15;
+    countdown = setInterval(() => { 
+      timer--;
+      document.getElementById("timer").innerHTML = timer;
+      if (timer <= 0) {
+        clearInterval(countdown);
+        decreaseHeroBar();
+        document.getElementById("result").innerHTML = `The correct answer was ${response}.`;
+        playGame();
+      }
+    }, 1000);
+  };
+
+
