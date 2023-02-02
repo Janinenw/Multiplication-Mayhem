@@ -163,7 +163,9 @@ form{
     color: rgb(233, 235, 175);
 }
 
-
+#timer {
+    color: white;
+}
 
 .hidden {
     display: none;
