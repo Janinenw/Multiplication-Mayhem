@@ -15,41 +15,34 @@ class Villain {
 const hero = new Hero("Multiplication Mastermind");
 const villain = new Villain("The Calculator");
 
-
 document.addEventListener("DOMContentLoaded", function() {
   function setup() {
-    const startButton = document.querySelector("#start-button");
+    const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", function() {
-      const instructions = document.querySelector("#instructions");
+      const instructions = document.getElementById("instructions");
       instructions.classList.remove("hidden");
-      const form = document.querySelector("form");
-      form.classList.remove("hidden")
-      const question = document.querySelector("#question");
+      const form = document.getElementsByTagName("form")[0];
+      form.classList.remove("hidden");
+      const question = document.getElementById("question");
       question.classList.remove("hidden");
 
-      const answer = document.querySelector("#answer");
+      const answer = document.getElementById("answer");
       answer.classList.remove("hidden");
 
-      const submitButton = document.querySelector("#submit-button");
+      const submitButton = document.getElementById("submit-button");
       submitButton.addEventListener("click", checkAnswer);
       submitButton.classList.remove("hidden");
 
-      const result = document.querySelector("#result");
+      const result = document.getElementById("result");
       result.classList.remove("hidden");
 
-      const hero = document.querySelector("#hero");
-      hero.classList.remove("hidden");
-      
-      const villain = document.querySelector("#villain");
-      villain.classList.remove("hidden");
-
-      const heroBar = document.querySelector("#hero-bar");
+      const heroBar = document.getElementById("hero-bar");
       heroBar.classList.remove("hidden");
-      document.querySelector("#hero-level").style.width = "100%";
+      document.getElementById("hero-level").style.width = "100%";
 
-      const villainBar = document.querySelector("#villain-bar");
+      const villainBar = document.getElementById("villain-bar");
       villainBar.classList.remove("hidden");
-      document.querySelector("#villain-level").style.width = "100%";
+      document.getElementById("villain-level").style.width = "100%";
 
       startButton.style.display = "none";
       setTimeout(instructionsCheck, 5000);
@@ -59,29 +52,27 @@ document.addEventListener("DOMContentLoaded", function() {
   function instructionsCheck() {
     const userResponse = prompt("Have you read the instructions? Type 'yes' to continue.");
     if (userResponse === "yes") {
-      playGame()
+      playGame();
     } else {
-      playGame()
+      playGame();
     }
   }
-
   setup();
 });
 
 const playGame = () => {
   const num1 = Math.floor(Math.random() * 12) + 1;
   const num2 = Math.floor(Math.random() * 12) + 1;
-  document.querySelector("#question").innerHTML = `${num1} x ${num2}`
+  document.getElementById("question").innerHTML = `${num1} x ${num2}`;
   startTimer(num1 * num2);
 };
-
 
 const decreaseHeroBar = () => {
   hero.health -= 10;
   if (hero.health < 0) {
     hero.health = 0;
   }
-  document.querySelector("#hero-level").style.width = `${hero.health}%`;
+  document.getElementById("hero-level").style.width = `${hero.health}%`;
 };
 
 const decreaseVillainBar = () => {
@@ -89,41 +80,39 @@ const decreaseVillainBar = () => {
   if (villain.health < 0) {
     villain.health = 0;
   }
-  document.querySelector("#villain-level").style.width = `${villain.health}%`;
+  document.getElementById("villain-level").style.width = `${villain.health}%`;
+};
+const checkAnswer = (e) => {
+  e.preventDefault();
+  const answer = document.getElementById("answer").value;
+  const question = document.getElementById("question").innerHTML;
+  const response = question.split(" x ")[0] * question.split(" x ")[1];
+  if (answer == response) {
+    document.getElementById("result").innerHTML = "Correct!";
+    decreaseVillainBar();
+    clearInterval(countdown);
+    playGame();
+  } else {
+    document.getElementById("result").innerHTML = "Try again.";
+    decreaseHeroBar();
+  }
+  document.getElementById("answer").value = "";
 };
 
-  const checkAnswer = (e) => {
-    e.preventDefault();
-    const answer = document.getElementById("answer").value;
-    const question = document.getElementById("question").innerHTML;
-    const response = question.split(" x ")[0] * question.split(" x ")[1];
-    if (answer == response) {
-      document.getElementById("result").innerHTML = "Correct!";
-      decreaseVillainBar();
-      clearInterval(countdown)
-      playGame();
-    } else {
-      document.getElementById("result").innerHTML = "Try again.";
-      decreaseHeroBar();
-    }
-    document.getElementById("answer").value = "";
-  }
+let countdown; 
 
-
-  let countdown; 
-
-  const startTimer = (response) => {
-    let timer = 16;
-    countdown = setInterval(() => {
+const startTimer = (response) => {
+  let timer = 15;
+  countdown = setInterval(() => { 
     timer--;
     document.getElementById("timer").innerHTML = timer;
     if (timer <= 0) {
-    clearInterval(countdown);
-    decreaseHeroBar();
-    document.getElementById("result").innerHTML = `The correct answer was ${response}.`;
-    setTimeout(() => {
-    playGame();
-    }, 2000);
+      clearInterval(countdown);
+      decreaseHeroBar();
+      document.getElementById("result").innerHTML = `The correct answer was ${response}.`;
+      setTimeout(() => {
+        playGame();
+      }, 2000);
     }
-    }, 1000);
-    };
+  }, 1000);
+};

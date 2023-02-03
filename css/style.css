@@ -73,8 +73,6 @@ h1 {
     margin-bottom: 10px; 
     visibility: visible;
 }
-
-
 #hero-level {
     width: 0;
     height: 100%;
@@ -108,7 +106,6 @@ h1 {
     transform: rotate(90deg);
     visibility: visible;
 }
-
 #villain-level {
     width: 0;
     height: 100%;
