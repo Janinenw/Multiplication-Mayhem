@@ -141,6 +141,11 @@ img {
 
 #result {
     color:white;
+    top: 400px;
+    left: 800px;
+    position:absolute;
+    /* left: 810px
+     */
 }
 
 #timer {
@@ -174,3 +179,59 @@ margin-top:  -250px
 margin-left:400px;
 margin-top: 300px;
 }
+
+
+
+
+#hero-bar {
+    width: 200px;
+    height: 20px;
+    top: -600px;
+    left: 650px;
+    margin: 0 auto;
+    /* width: 200px;
+    height: 20px; */
+    border: solid 3px rgb(233, 235, 175);
+    transform: rotate(270deg);
+    position: relative;
+}
+  #hero-level {
+    width: 100%; 
+    height: 100%;
+    background-color: #009D93
+  
+
+   
+  }
+
+  #villain-bar {
+    width: 200px;
+    height: 20px;
+    top: -600px;
+    left: -650px;
+    margin: 0 auto;
+    /* width: 200px;
+    height: 20px; */
+    border: solid 3px rgb(233, 235, 175);
+    transform: rotate(270deg);
+    position: relative;
+}
+
+  #villain-level {
+    width: 100%; 
+    height: 100%;
+    background-color:#FF180B ;
+   
+  }
+
+
+  #answer {
+    position: relative;
+    left: 810px
+
+  }
+
+  #submit-button {
+    position:relative;
+    left: 820px;
+  }
