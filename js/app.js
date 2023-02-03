@@ -116,7 +116,7 @@ const instructionsCheck = () => {
   };
   const checkAnswer = (e) => {
     e.preventDefault();
-    const answer = document.getElementById("answer").ariaValueMax;
+    const answer = document.getElementById("answer").value;
     const question = document.getElementById("question").innerHTML;
     const response = question.split(" x ")[0] * question.split(" x ")[1];
     if (answer == response) {
