@@ -1,3 +1,10 @@
+
+
+.hidden {
+    display: none;
+}
+
+
 html, body {
     margin: 0; height: 100%; overflow: hidden;
     background: black;
@@ -10,46 +17,64 @@ html, body {
     top:-40px;
     left: 330px;
 }
-    
-.image-container {
-    width: 700px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 30px;
-    top: -90px;
-    margin: auto;
-    margin-top: 50px;
-    border: solid 3px rgb(233, 235, 175);
-    text-align: center;
-    margin-bottom: 10px;
-    
-}
-    
-    
-.image-container img {
-    position: relative;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%, 0) scale(1.5);
-    max-width: 100%;
-    max-height: 100%;
-    filter: contrast(140%);
+
+
+
+
+
+.hidden {
+    display: none;
 }
 
-h1 {
+img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+}
+    
+
+
+
+
+ h1{ 
     position: relative;
-    top: -23px;
+    top: 80px;
     font-family: 'Bangers', cursive;
+    font-size: 100px;
     color: rgb(233, 235, 175);
     text-align:center;
 }  
 
-.buttons-one {
-    font-family: "Comic Sans MS", sans-serif;
-    background-color: rgb(233, 235, 175); 
-    margin-bottom: 10px;
+h2{
     position: relative;
+    top: -450px;
+    font-family: 'Bangers', cursive;
+    color: rgb(233, 235, 175);
+    text-align:center;
 }
+
+h3{
+    position: relative;
+    top: -400px;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    color: rgb(233, 235, 175);
+    text-align:center;
+}  
+
+.container {
+    text-align: center;
+ }
+ 
+ .buttons-one {
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: rgb(233, 235, 175);
+    position: absolute;
+    top: 600px;
+    left: 820px;
+    display: inline-block;
+    }
+ 
 
 .button-container {
     position: absolute;
@@ -59,72 +84,8 @@ h1 {
 
     ul {
     color: white
-}
+} 
 
-/* #hero-bar {
-    width: 200px;
-    height: 20px;
-    top: -480px;
-    left: 500px;
-    margin: 0 auto;
-    background-color: #009D93;
-    position: relative;
-    transform: rotate(90deg);
-    margin-bottom: 10px; 
-    visibility: visible;
-}
-#hero-level {
-    width: 0;
-    height: 100%;
-    background-color: red; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 10px;  */
-    
-    #hero-bar {
-        width: 200px;
-        height: 20px;
-        border: 1px solid black;
-      }
-    
-      #hero-level {
-        width: 100%; 
-        height: 100%;
-        background-color: green;
-      }
-
-/* #villain-bar {
-    top: -510px;
-    right: 500px;
-    width: 200px;
-    height: 20px;
-    margin: 0 auto;
-    background-color: #FF180B;
-    position: relative;
-    margin-bottom: 10px; 
-    transform: rotate(90deg);
-    visibility: visible;
-}
-#villain-level {
-    width: 0;
-    height: 100%;
-    background-color: red; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 10px;  */
-    #villain-bar {
-        width: 200px;
-        height: 20px;
-        border: 1px solid black;
-      }
-    
-      #villain-level {
-        width: 100%; 
-        height: 100%;
-        background-color: pink;
-      }
 
 
 #question {
@@ -140,15 +101,6 @@ h1 {
 }
 
 
-form{
-    position: relative;
-    max-height: 50px;
-    width: 220px;
-    left: 310px;
-    top: -195px;
-    color: white;
-    visibility: visible;
-}
 
 #instructions{
     position: relative;
@@ -161,6 +113,36 @@ form{
     color: rgb(233, 235, 175);
 }
 
+
+
+.image-container {
+    display: flex;
+}
+
+img:first-child {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+img:last-child {
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+#instructions{
+    color:white;
+}
+
+#result {
+    color:white;
+}
+
 #timer {
     color: white;
 }
@@ -168,3 +150,18 @@ form{
 .hidden {
     display: none;
 }
+
+#background-image {
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    top: -90px;
+    margin: auto;
+    margin-top: 50px;
+    border: solid 3px rgb(233, 235, 175);
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+    
