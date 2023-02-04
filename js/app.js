@@ -109,20 +109,27 @@ const instructionsCheck = () => {
     const num2 = Math.floor(Math.random() * 12) + 1;
     document.getElementById("question").innerHTML = `${num1} x ${num2}`;
     startTimer(num1 * num2)
-
-
   };
+    
+    function showElement() {
+      document.getElementById("background-image").style.display = "";
+    }
 
+  
   const checkWin = () => {
-    if (hero.health === 0) {
-      alert("Villain wins! Try again.")
-      endGame()
-     
+    if (hero.health <= 0) {
+      alert("Villain wins! Try again.");
+      endGame();
     } else if (villain.health === 0) {
+      const showElement = () => {
+        document.getElementById("final-image").style.display = "";
+      };
+      showElement();
       alert("Hero wins! Congratulations.");
-      endGame()
+      endGame();
     }
   };
+      
   
   
   const decreaseHeroBar = () => {
@@ -192,3 +199,6 @@ const instructionsCheck = () => {
     villain.health = 100;
     location.reload();
   };
+
+ 
+  
