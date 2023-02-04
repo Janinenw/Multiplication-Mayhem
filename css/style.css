@@ -47,10 +47,11 @@ img {
 
 h2{
     position: relative;
-    top: -450px;
+    top: -540px;
     font-family: 'Bangers', cursive;
-    color: rgb(233, 235, 175);
+    color: rgb(black);
     text-align:center;
+    font-size:23px;
 }
 
 h3{
@@ -170,13 +171,23 @@ img {
 margin-left: 800px;
 margin-top:  -250px
 }
+
 #timer {
-color:white;
-margin: left 700px;
-margin-top: -200px;
+    position: relative;
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+   
+  }
 
   
-      }
+  
+  
+  
+  
+  
+
   
 
 #instructions {
@@ -239,4 +250,5 @@ margin-top: 300px;
     position:relative;
     left: 820px;
   }
+
 

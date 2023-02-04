@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
     villainBar.classList.remove("hidden");
     document.getElementById("villain-level").style.width = "100%";
 
+    timer.addEventListener("click", ()=> {
+      timer.style.visibility=visibile
+    })
+
     startButton.style.display = "none";
     setTimeout(instructionsCheck, 5000);
 
@@ -67,6 +71,7 @@ function setUp() {
   images.forEach(img => {
     img.style.width = "75px";
     img.style.height = "auto";
+   
   });
 }
 
@@ -85,6 +90,7 @@ function setUpHeroImage() {
     hideHeaders()
     setUp();
     setUpHeroImage()
+
     });
     });
 
@@ -102,7 +108,9 @@ const instructionsCheck = () => {
     const num1 = Math.floor(Math.random() * 12) + 1;
     const num2 = Math.floor(Math.random() * 12) + 1;
     document.getElementById("question").innerHTML = `${num1} x ${num2}`;
-    startTimer(num1 * num2);
+    startTimer(num1 * num2)
+
+
   };
 
   const checkWin = () => {
