@@ -15,6 +15,8 @@ class Villain {
 const hero = new Hero("Multiplication Mastermind");
 const villain = new Villain("The Calculator");
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const startButton = document.getElementById("start-button");
   startButton.addEventListener("click", function() {
@@ -98,6 +100,15 @@ const instructionsCheck = () => {
     document.getElementById("question").innerHTML = `${num1} x ${num2}`;
     startTimer(num1 * num2);
   };
+
+  const checkWin = () => {
+    if (hero.health === 0) {
+      alert("Villain wins! Try again.");
+    } else if (villain.health === 0) {
+      alert("Hero wins! Congratulations.");
+    }
+  };
+  
   
   const decreaseHeroBar = () => {
     hero.health -= 10;
@@ -105,6 +116,9 @@ const instructionsCheck = () => {
       hero.health = 0;
     }
     document.getElementById("hero-level").style.width = `${hero.health}%`;
+    if (hero.health === 0) {
+      checkWin();
+    }
   };
   
   const decreaseVillainBar = () => {
@@ -113,7 +127,11 @@ const instructionsCheck = () => {
       villain.health = 0;
     }
     document.getElementById("villain-level").style.width = `${villain.health}%`;
+    if (villain.health === 0) {
+      checkWin();
+    }
   };
+ 
   const checkAnswer = (e) => {
     e.preventDefault();
     const answer = document.getElementById("answer").value;
@@ -129,8 +147,9 @@ const instructionsCheck = () => {
       decreaseHeroBar();
     }
     document.getElementById("answer").value = "";
+    
   };
-  
+
   let countdown; 
   
   const startTimer = (response) => {
@@ -148,4 +167,3 @@ const instructionsCheck = () => {
       }
     }, 1000);
   };
-
