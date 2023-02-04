@@ -96,7 +96,7 @@ function setUpHeroImage() {
 
 
 const instructionsCheck = () => {
-  const userResponse = prompt("Have you read the instructions? Type 'yes' to continue.");
+  const userResponse = prompt("Have you read the How-To-Play? Type 'yes' to continue.");
   if (userResponse === "yes") {
     playGame();
   } else {

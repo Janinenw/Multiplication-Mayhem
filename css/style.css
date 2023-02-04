@@ -95,7 +95,7 @@ h3{
     position: relative;
     text-shadow: 1px 4px 1px black;
     bottom: 230px;
-    left: 52px;
+    left: -110px;
     font-size: 40px;
     top: -110px
     
@@ -120,15 +120,19 @@ h3{
     display: flex;
 }
 
-img:first-child {
-    margin-right: 100px;
-    margin-left: 100px;
+#villain-image{
+    margin-right: -50px;
+    margin-left: 250px;
     margin-top: 50px;
+    border: solid 3px rgb(233, 235, 175);
+    border-radius: 10px;
 }
 
-img:last-child {
-    margin-left: 600px;
+#hero-image {
+    margin-left: 450px;
     margin-top: 50px;
+    border: solid 3px rgb(233, 235, 175);
+    border-radius: 10px;
 }
 
 img {
@@ -136,15 +140,14 @@ img {
     height: auto;
 }
 
-#instructions{
-    color:white;
-}
+
 
 #result {
-    color:white;
-    top: 400px;
+    top: 410px;
     left: 800px;
     position:absolute;
+    font-family:"Comic Sans MS", sans-serif;
+    color:white;
 }
 
 .hidden {
@@ -168,7 +171,7 @@ img {
 
 
 #question {
-margin-left: 800px;
+margin-left: 1000px;
 margin-top:  -250px
 }
 
@@ -196,7 +199,8 @@ margin-top:  -250px
 
 #instructions {
 margin-left:400px;
-margin-top: 300px;
+margin-top: 245px;
+color:rgb(233, 235, 175);
 }
 
 
@@ -205,11 +209,10 @@ margin-top: 300px;
 #hero-bar {
     width: 200px;
     height: 20px;
-    top: -600px;
+    top: -400px;
     left: 650px;
     margin: 0 auto;
-    /* width: 200px;
-    height: 20px; */
+    
     border: solid 3px rgb(233, 235, 175);
     transform: rotate(270deg);
     position: relative;
@@ -226,8 +229,8 @@ margin-top: 300px;
   #villain-bar {
     width: 200px;
     height: 20px;
-    top: -600px;
-    left: -650px;
+    top: -400px;
+    left: -600px;
     margin: 0 auto;
     /* width: 200px;
     height: 20px; */
@@ -253,10 +256,16 @@ margin-top: 300px;
   #submit-button {
     position:relative;
     left: 820px;
+    font:"Comic Sans MS", sans-serif;
   }
 
 
-
+h4 {
+    font-family:"Comic Sans MS", sans-serif;
+    color:rgb(233, 235, 175);
+    margin-left: 700px;
+    margin-top: 500x;
+}
 
   
  
