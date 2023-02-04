@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     startButton.style.display = "none";
     setTimeout(instructionsCheck, 5000);
+
   });
 });
 const hideHeaders = () => {
@@ -117,10 +118,11 @@ const instructionsCheck = () => {
     }
     document.getElementById("hero-level").style.width = `${hero.health}%`;
     if (hero.health === 0) {
-      checkWin();
+      setTimeout(() => {
+        checkWin();
+      }, 1000);
     }
   };
-  
   const decreaseVillainBar = () => {
     villain.health -= 10;
     if (villain.health < 0) {
@@ -128,9 +130,12 @@ const instructionsCheck = () => {
     }
     document.getElementById("villain-level").style.width = `${villain.health}%`;
     if (villain.health === 0) {
-      checkWin();
+      setTimeout(() => {
+        checkWin();
+      }, 1000);
     }
-  };
+  }
+  
  
   const checkAnswer = (e) => {
     e.preventDefault();
