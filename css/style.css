@@ -18,9 +18,9 @@ html, body {
     left: 330px;
 }
 
-
-
-
+#timer-container p#timer {
+    font-family: "Comic Sans MS", sans-serif;
+  }
 
 .hidden {
     display: none;
@@ -143,8 +143,8 @@ img {
 
 
 #result {
-    top: 410px;
-    left: 800px;
+    top: 430px;
+    left: 850px;
     position:absolute;
     font-family:"Comic Sans MS", sans-serif;
     color:white;
