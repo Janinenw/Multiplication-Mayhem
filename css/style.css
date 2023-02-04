@@ -183,12 +183,14 @@ margin-top:  -250px
 
   
   
-  #final-image {
-    display:none;
-  }
-  
-  
-  
+  #final-image  {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    z-index: 999;
+    }
 
   
 

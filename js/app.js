@@ -121,10 +121,7 @@ const instructionsCheck = () => {
       alert("Villain wins! Try again.");
       endGame();
     } else if (villain.health === 0) {
-      const showElement = () => {
-        document.getElementById("final-image").style.display = "";
-      };
-      showElement();
+      document.getElementById("final-image").style.display = "block";
       alert("Hero wins! Congratulations.");
       endGame();
     }
@@ -197,8 +194,7 @@ const instructionsCheck = () => {
   const endGame = () => {
     hero.health = 100;
     villain.health = 100;
-    location.reload();
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
   };
-
- 
-  
