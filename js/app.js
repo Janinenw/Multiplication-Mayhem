@@ -104,9 +104,12 @@ const instructionsCheck = () => {
 
   const checkWin = () => {
     if (hero.health === 0) {
-      alert("Villain wins! Try again.");
+      alert("Villain wins! Try again.")
+      endGame()
+     
     } else if (villain.health === 0) {
       alert("Hero wins! Congratulations.");
+      endGame()
     }
   };
   
@@ -171,4 +174,10 @@ const instructionsCheck = () => {
         }, 2000);
       }
     }, 1000);
+  };
+
+  const endGame = () => {
+    hero.health = 100;
+    villain.health = 100;
+    location.reload();
   };
