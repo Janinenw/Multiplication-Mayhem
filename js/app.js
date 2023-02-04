@@ -111,18 +111,18 @@ const instructionsCheck = () => {
     startTimer(num1 * num2)
   };
     
-    function showElement() {
-      document.getElementById("background-image").style.display = "";
-    }
+    // function showElement() {
+    //   document.getElementById("background-image").style.display = "";
+    // }
 
   
   const checkWin = () => {
     if (hero.health <= 0) {
-      alert("Villain wins! Try again.");
+      alert("The Calculator won! Try again.");
       endGame();
     } else if (villain.health === 0) {
       document.getElementById("final-image").style.display = "block";
-      alert("Hero wins! Congratulations.");
+      alert("Multipliation Mastermind won! Congratulations.");
       endGame();
     }
   };
