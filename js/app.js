@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const result = document.getElementById("result");
     result.classList.remove("hidden");
 
+    const timer = document.getElementById("timer")
+    result.classList.remove("hidden")
+
     const heroBar = document.getElementById("hero-bar");
     heroBar.classList.remove("hidden");
     document.getElementById("hero-level").style.width = "100%";

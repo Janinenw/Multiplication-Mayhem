@@ -144,12 +144,6 @@ img {
     top: 400px;
     left: 800px;
     position:absolute;
-    /* left: 810px
-     */
-}
-
-#timer {
-    color: white;
 }
 
 .hidden {
@@ -166,14 +160,24 @@ img {
     margin-top: 50px;
     border: solid 3px rgb(233, 235, 175);
     margin-bottom: 10px;
-    margin-left: 550px
-    
+    margin-left: 550px;
 }
+ 
+    
+
 
 #question {
 margin-left: 800px;
 margin-top:  -250px
 }
+#timer {
+color:white;
+margin: left 700px;
+margin-top: -200px;
+
+  
+      }
+  
 
 #instructions {
 margin-left:400px;
@@ -235,3 +239,4 @@ margin-top: 300px;
     position:relative;
     left: 820px;
   }
+
